@@ -12,6 +12,7 @@
 		4839CF7129955AA800AAABD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4839CF7029955AA800AAABD8 /* Assets.xcassets */; };
 		4839CF7429955AA800AAABD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4839CF7229955AA800AAABD8 /* LaunchScreen.storyboard */; };
 		4839CF7F29955B5600AAABD8 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4839CF7E29955B5600AAABD8 /* SignUpController.swift */; };
+		4839CF82299563B000AAABD8 /* SignUpViewController + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4839CF81299563B000AAABD8 /* SignUpViewController + Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4839CF7329955AA800AAABD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4839CF7529955AA800AAABD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4839CF7E29955B5600AAABD8 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		4839CF81299563B000AAABD8 /* SignUpViewController + Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController + Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,6 @@
 		4839CF5B29955AA700AAABD8 = {
 			isa = PBXGroup;
 			children = (
-				4839CF7E29955B5600AAABD8 /* SignUpController.swift */,
 				4839CF6629955AA700AAABD8 /* Registration */,
 				4839CF6529955AA700AAABD8 /* Products */,
 			);
@@ -57,6 +58,7 @@
 			children = (
 				4839CF7B29955AB100AAABD8 /* App */,
 				4839CF7D29955B0900AAABD8 /* Resources */,
+				4839CF8029955EEB00AAABD8 /* View */,
 				4839CF7C29955AFC00AAABD8 /* Launch */,
 			);
 			path = Registration;
@@ -86,6 +88,15 @@
 				4839CF7529955AA800AAABD8 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4839CF8029955EEB00AAABD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4839CF7E29955B5600AAABD8 /* SignUpController.swift */,
+				4839CF81299563B000AAABD8 /* SignUpViewController + Constraints.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				4839CF6829955AA700AAABD8 /* AppDelegate.swift in Sources */,
 				4839CF6A29955AA700AAABD8 /* SceneDelegate.swift in Sources */,
 				4839CF7F29955B5600AAABD8 /* SignUpController.swift in Sources */,
+				4839CF82299563B000AAABD8 /* SignUpViewController + Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Registration/Info.plist;
+				INFOPLIST_FILE = Registration/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -326,7 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Registration/Info.plist;
+				INFOPLIST_FILE = Registration/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
