@@ -10,12 +10,11 @@ import UIKit
 class  SignUpController: UIViewController {
     
     let topView: UIView = {
-    let view = UIView()
-    view.backgroundColor = .orange
-    view.translatesAutoresizingMaskIntoConstraints = false
-    return view
-        }()
-    
+        let view = UIView()
+        view.backgroundColor = .orange
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     let email: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
@@ -50,23 +49,16 @@ class  SignUpController: UIViewController {
         button.backgroundColor = UIColor.lightGray
         return  button
     }()
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
-            super.viewDidLoad()
-        
+        super.viewDidLoad()
         setupTopView()
         setupTextFields()
         view.backgroundColor = .white
         }
+    
     func setupTopView() {
-            
             view.addSubview(topView)
-            
             topView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
             topView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
             topView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -80,7 +72,6 @@ class  SignUpController: UIViewController {
             stackView.distribution = .fillEqually
             stackView.translatesAutoresizingMaskIntoConstraints = false
             
-            //add stack view as subview to main view with AutoLayout
             view.addSubview(stackView)
             stackView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 40).isActive = true
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive = true
