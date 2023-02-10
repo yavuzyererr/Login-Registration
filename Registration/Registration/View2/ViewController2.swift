@@ -1,27 +1,18 @@
 //
-//  SignUpController.swift
+//  ViewController2.swift
 //  Registration
 //
-//  Created by Yavuz Yerer on 9.02.2023.
+//  Created by Yavuz Yerer on 10.02.2023.
 //
 
 import UIKit
-
-class  SignUpController: UIViewController {
+class ViewController2 : UIViewController {
     
     let topView: UIView = {
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = .blue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-    }()
-    let email: UITextField = {
-        let email = UITextField()
-        email.translatesAutoresizingMaskIntoConstraints = false
-        email.placeholder = "Email"
-        email.borderStyle = .roundedRect
-        email.backgroundColor = UIColor(white: 0, alpha: 0.1)
-        return email
     }()
     let userName: UITextField = {
         let userName = UITextField()
@@ -39,29 +30,21 @@ class  SignUpController: UIViewController {
         password.backgroundColor = UIColor(white: 0, alpha: 0.1)
         return password
     }()
-    let signUpButton: UIButton = {
+    let signInButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Sign Up", for: .normal)
+        button.setTitle("Sign In", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 3
         button.backgroundColor = UIColor.lightGray
-        button.addTarget(self, action: #selector(goToSignInPage), for: .touchUpInside)
         return  button
     }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeConstraint()
+        makeConstraints()
         view.backgroundColor = .white
-        }
-    @objc func goToSignInPage() {
-        let destinationVC = ViewController2()
-        navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
    
-}
-
     
+}

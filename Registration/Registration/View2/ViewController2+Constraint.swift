@@ -1,14 +1,15 @@
 //
-//  SignUpViewController + Constraints.swift
+//  ViewController2+Constraint.swift
 //  Registration
 //
-//  Created by Yavuz Yerer on 9.02.2023.
+//  Created by Yavuz Yerer on 10.02.2023.
 //
 
-import SnapKit
 import UIKit
-extension SignUpController {
-    func makeConstraint(){
+import SnapKit
+
+extension ViewController2 {
+    func makeConstraints(){
         setupTopView()
         setupTextFields()
     }
@@ -22,7 +23,7 @@ extension SignUpController {
     
    private  func setupTextFields() {
         
-        let stackView = UIStackView(arrangedSubviews: [email, userName, password, signUpButton])
+        let stackView = UIStackView(arrangedSubviews: [userName, password, signInButton])
         stackView.axis = .vertical
         stackView.spacing = 10
         stackView.distribution = .fillEqually
