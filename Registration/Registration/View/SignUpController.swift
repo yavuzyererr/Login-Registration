@@ -9,12 +9,15 @@ import UIKit
 
 class  SignUpController: UIViewController {
     
-    let topView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .orange
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    let register: UILabel = {
+        let register = UILabel()
+        register.textColor = .white
+        register.backgroundColor = .orange
+        register.translatesAutoresizingMaskIntoConstraints = false
+        register.font = .systemFont(ofSize: 30)
+        return register
     }()
+    
     let email: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
@@ -23,6 +26,7 @@ class  SignUpController: UIViewController {
         email.backgroundColor = UIColor(white: 0, alpha: 0.1)
         return email
     }()
+    
     let userName: UITextField = {
         let userName = UITextField()
         userName.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +35,7 @@ class  SignUpController: UIViewController {
         userName.backgroundColor = UIColor(white: 0, alpha: 0.1)
         return userName
     }()
+    
     let password: UITextField = {
         let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
@@ -39,6 +44,7 @@ class  SignUpController: UIViewController {
         password.backgroundColor = UIColor(white: 0, alpha: 0.1)
         return password
     }()
+    
     let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
@@ -56,12 +62,12 @@ class  SignUpController: UIViewController {
         makeConstraint()
         view.backgroundColor = .white
         }
+    
     @objc func goToSignInPage() {
+       // viewmodel.signUp(email)
         let destinationVC = ViewController2()
         navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
-   
 }
 
     
