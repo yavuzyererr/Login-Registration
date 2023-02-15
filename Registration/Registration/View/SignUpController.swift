@@ -11,6 +11,7 @@ class  SignUpController: UIViewController {
     
     let register: UILabel = {
         let register = UILabel()
+        register.text = "REGISTER"
         register.textColor = .white
         register.backgroundColor = .orange
         register.translatesAutoresizingMaskIntoConstraints = false
@@ -21,18 +22,20 @@ class  SignUpController: UIViewController {
     let email: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
-        email.placeholder = "Email"
+        email.text = "Email"
         email.borderStyle = .roundedRect
-        email.backgroundColor = .white
+        email.backgroundColor = .lightGray
+        email.textColor = .white
         return email
     }()
     
     let userName: UITextField = {
         let userName = UITextField()
         userName.translatesAutoresizingMaskIntoConstraints = false
-        userName.placeholder = "Username"
+        userName.text = "Username"
         userName.borderStyle = .roundedRect
-        userName.backgroundColor = .white
+        userName.backgroundColor = .lightGray
+        userName.textColor = .white
         return userName
     }()
     
@@ -40,8 +43,9 @@ class  SignUpController: UIViewController {
         let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.borderStyle = .roundedRect
-        password.placeholder = "Password"
-        password.backgroundColor = .white
+        password.text = "Password"
+        password.textColor = .white
+        password.backgroundColor = .lightGray
         return password
     }()
     
@@ -59,6 +63,7 @@ class  SignUpController: UIViewController {
     
     let label: UILabel = {
       let label = UILabel()
+      label.translatesAutoresizingMaskIntoConstraints = false
       label.text = "I already have an account"
       label.textColor = .black
       label.backgroundColor = .white
@@ -67,7 +72,12 @@ class  SignUpController: UIViewController {
     
     let login: UIButton = {
         let login = UIButton()
+        login.setTitle("Login", for: .normal)
         login.setTitleColor(.orange, for: .normal)
+        login.backgroundColor = .white
+        login.translatesAutoresizingMaskIntoConstraints = false
+        login.layer.cornerRadius = 5
+        login.addTarget(self, action: #selector(goToSignInPage), for: .touchUpInside)
         return login
     }()
     override func viewDidLoad() {
