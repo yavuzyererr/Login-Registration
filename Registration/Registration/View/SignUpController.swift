@@ -23,7 +23,7 @@ class  SignUpController: UIViewController {
         email.translatesAutoresizingMaskIntoConstraints = false
         email.placeholder = "Email"
         email.borderStyle = .roundedRect
-        email.backgroundColor = UIColor(white: 0, alpha: 0.1)
+        email.backgroundColor = .white
         return email
     }()
     
@@ -32,7 +32,7 @@ class  SignUpController: UIViewController {
         userName.translatesAutoresizingMaskIntoConstraints = false
         userName.placeholder = "Username"
         userName.borderStyle = .roundedRect
-        userName.backgroundColor = UIColor(white: 0, alpha: 0.1)
+        userName.backgroundColor = .white
         return userName
     }()
     
@@ -41,7 +41,7 @@ class  SignUpController: UIViewController {
         password.translatesAutoresizingMaskIntoConstraints = false
         password.borderStyle = .roundedRect
         password.placeholder = "Password"
-        password.backgroundColor = UIColor(white: 0, alpha: 0.1)
+        password.backgroundColor = .white
         return password
     }()
     
@@ -52,15 +52,35 @@ class  SignUpController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 3
-        button.backgroundColor = UIColor.lightGray
+        button.backgroundColor = .orange
         button.addTarget(self, action: #selector(goToSignInPage), for: .touchUpInside)
         return  button
     }()
-
+    
+    let label: UILabel = {
+      let label = UILabel()
+      label.text = "I already have an account"
+      label.textColor = .black
+      label.backgroundColor = .white
+      return label
+    }()
+    
+    let login: UIButton = {
+        let login = UIButton()
+        login.setTitleColor(.orange, for: .normal)
+        return login
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeConstraint()
+        view.addSubview(register)
+        view.addSubview(email)
+        view.addSubview(userName)
+        view.addSubview(password)
+        view.addSubview(signUpButton)
+        view.addSubview(label)
+        view.addSubview(login)
         view.backgroundColor = .white
+        makeConstraint()
         }
     
     @objc func goToSignInPage() {

@@ -12,17 +12,26 @@ extension SignUpController {
     func makeConstraint(){
         makeRegisterConstraint()
     }
-    private func makeRegisterConstraint(){
+    private func makeRegisterConstraint() {
         register.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.right.equalToSuperview()
             make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.centerX.equalTo(view.snp.centerX)
         }
     }
-    private func makeEmailTextField(){
-       
-        
-        
-    }
 }
+  /*  private func makeEmailConstraint() {
+        email.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(400)
+            make.centerX.equalTo()
+        }
+    }
+  //  private func makeUserNameConstraint() {
+        userName.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(500)
+            make.centerX.equa
+            
+        }
+    }
+}*/
