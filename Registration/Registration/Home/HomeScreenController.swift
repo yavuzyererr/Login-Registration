@@ -8,15 +8,26 @@
 import UIKit
 
 class HomeScreenController: UIViewController {
+    let customView: UIView = {
+        let customView = UIView()
+        customView.backgroundColor = .orange
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        customView.layer.cornerRadius = 10
+        return customView
+    }()
     let welcomeLabel: UILabel = {
       let welcomeLabel = UILabel()
         welcomeLabel.text = "HELLO USER"
+        welcomeLabel.textColor = .black
+        welcomeLabel.font = .systemFont(ofSize: 30)
+        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         return welcomeLabel
     }()
     let logOut: UIButton = {
       let logOut = UIButton()
         logOut.setTitle("LogOut", for: .normal)
-        logOut.setTitleColor(.white, for: .normal)
+        logOut.setTitleColor(.black, for: .normal)
+        logOut.backgroundColor = .blue
         logOut.translatesAutoresizingMaskIntoConstraints = false
         logOut.layer.cornerRadius = 5
         logOut.addTarget(self, action: #selector(goToLoginScreen), for: .touchUpInside)
@@ -25,10 +36,12 @@ class HomeScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(logOut)
+        view.addSubview(customView)
+        customView.addSubview(welcomeLabel)
+        view.backgroundColor = .white
         makeConstraints()
     }
     @objc func goToLoginScreen(){
-        let destinationVc = LoginController()
-        navigationController?.present(destinationVc, animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }

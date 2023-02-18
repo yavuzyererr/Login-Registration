@@ -114,7 +114,8 @@ class  SignUpController: UIViewController {
     @objc func goToSignInPage() {
         // viewmodel.signUp(email)
         let destinationVC = LoginController()
-        navigationController?.present(destinationVC, animated: true)
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(destinationVC, animated: true)
         
     }
 }

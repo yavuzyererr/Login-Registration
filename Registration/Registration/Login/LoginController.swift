@@ -101,8 +101,7 @@ class LoginController : UIViewController {
     }
     
     @objc func goToSignUpPage() {
-        let destinationVC = SignUpController()
-        navigationController?.pushViewController(destinationVC, animated: true)
+        navigationController?.popViewController(animated: true)
     }
     @objc func goToHomeScreen() {
         let destinationVC = HomeScreenController()
