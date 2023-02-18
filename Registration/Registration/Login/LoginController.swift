@@ -54,6 +54,7 @@ class LoginController : UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.lightGray
+        button.addTarget(self, action: #selector(goToHomeScreen), for: .touchUpInside)
         return  button
     }()
     
@@ -101,7 +102,10 @@ class LoginController : UIViewController {
     
     @objc func goToSignUpPage() {
         let destinationVC = SignUpController()
-        navigationController?.present(destinationVC, animated: true)
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
+    @objc func goToHomeScreen() {
+        let destinationVC = HomeScreenController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
