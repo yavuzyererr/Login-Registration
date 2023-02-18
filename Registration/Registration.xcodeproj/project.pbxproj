@@ -13,9 +13,9 @@
 		4839CF7429955AA800AAABD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4839CF7229955AA800AAABD8 /* LaunchScreen.storyboard */; };
 		4839CF7F29955B5600AAABD8 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4839CF7E29955B5600AAABD8 /* SignUpController.swift */; };
 		4839CF85299563E300AAABD8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4839CF84299563E300AAABD8 /* SnapKit */; };
-		4887FC51299D1BA2003E0E92 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887FC50299D1BA2003E0E92 /* Constraint.swift */; };
-		4887FC53299D1BAE003E0E92 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887FC52299D1BAE003E0E92 /* Constraints.swift */; };
-		48A6899429969F4C007206CE /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A6899329969F4C007206CE /* ViewController2.swift */; };
+		4887FC51299D1BA2003E0E92 /* SignUp+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887FC50299D1BA2003E0E92 /* SignUp+Constraints.swift */; };
+		4887FC53299D1BAE003E0E92 /* Login+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887FC52299D1BAE003E0E92 /* Login+Constraints.swift */; };
+		48A6899429969F4C007206CE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A6899329969F4C007206CE /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +26,9 @@
 		4839CF7329955AA800AAABD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4839CF7529955AA800AAABD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4839CF7E29955B5600AAABD8 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
-		4887FC50299D1BA2003E0E92 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
-		4887FC52299D1BAE003E0E92 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
-		48A6899329969F4C007206CE /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		4887FC50299D1BA2003E0E92 /* SignUp+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp+Constraints.swift"; sourceTree = "<group>"; };
+		4887FC52299D1BAE003E0E92 /* Login+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Constraints.swift"; sourceTree = "<group>"; };
+		48A6899329969F4C007206CE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 			children = (
 				4839CF7B29955AB100AAABD8 /* App */,
 				4839CF7D29955B0900AAABD8 /* Resources */,
-				4839CF8029955EEB00AAABD8 /* View */,
-				48A6899029969E73007206CE /* View2 */,
+				4839CF8029955EEB00AAABD8 /* SignUp */,
+				48A6899029969E73007206CE /* Login */,
 				4839CF7C29955AFC00AAABD8 /* Launch */,
 			);
 			path = Registration;
@@ -97,22 +97,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4839CF8029955EEB00AAABD8 /* View */ = {
+		4839CF8029955EEB00AAABD8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				4839CF7E29955B5600AAABD8 /* SignUpController.swift */,
-				4887FC50299D1BA2003E0E92 /* Constraint.swift */,
+				4887FC50299D1BA2003E0E92 /* SignUp+Constraints.swift */,
 			);
-			path = View;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
-		48A6899029969E73007206CE /* View2 */ = {
+		48A6899029969E73007206CE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				48A6899329969F4C007206CE /* ViewController2.swift */,
-				4887FC52299D1BAE003E0E92 /* Constraints.swift */,
+				48A6899329969F4C007206CE /* LoginController.swift */,
+				4887FC52299D1BAE003E0E92 /* Login+Constraints.swift */,
 			);
-			path = View2;
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A6899429969F4C007206CE /* ViewController2.swift in Sources */,
+				48A6899429969F4C007206CE /* LoginController.swift in Sources */,
 				4839CF6829955AA700AAABD8 /* AppDelegate.swift in Sources */,
 				4839CF6A29955AA700AAABD8 /* SceneDelegate.swift in Sources */,
-				4887FC51299D1BA2003E0E92 /* Constraint.swift in Sources */,
-				4887FC53299D1BAE003E0E92 /* Constraints.swift in Sources */,
+				4887FC51299D1BA2003E0E92 /* SignUp+Constraints.swift in Sources */,
+				4887FC53299D1BAE003E0E92 /* Login+Constraints.swift in Sources */,
 				4839CF7F29955B5600AAABD8 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

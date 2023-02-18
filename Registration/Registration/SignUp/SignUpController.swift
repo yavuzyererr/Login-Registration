@@ -19,10 +19,18 @@ class  SignUpController: UIViewController {
         return register
     }()
     
+    let customView: UIView = {
+        let customView = UIView()
+        customView.backgroundColor = .orange
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        customView.layer.cornerRadius = 10
+        return customView
+    }()
+    
     let email: UITextField = {
         let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
-        email.text = "Email"
+        email.placeholder = "Email"
         email.borderStyle = .roundedRect
         email.backgroundColor = .lightGray
         email.textColor = .white
@@ -32,7 +40,7 @@ class  SignUpController: UIViewController {
     let userName: UITextField = {
         let userName = UITextField()
         userName.translatesAutoresizingMaskIntoConstraints = false
-        userName.text = "Username"
+        userName.placeholder = "Username"
         userName.borderStyle = .roundedRect
         userName.backgroundColor = .lightGray
         userName.textColor = .white
@@ -43,7 +51,7 @@ class  SignUpController: UIViewController {
         let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.borderStyle = .roundedRect
-        password.text = "Password"
+        password.placeholder = "Password"
         password.textColor = .white
         password.backgroundColor = .lightGray
         return password
@@ -61,17 +69,17 @@ class  SignUpController: UIViewController {
         return  button
     }()
     
-    let label: UILabel = {
-      let label = UILabel()
-      label.translatesAutoresizingMaskIntoConstraints = false
-      label.text = "I already have an account"
-      label.textColor = .black
-      label.backgroundColor = .white
-      return label
+    let WarningLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "I already have an account"
+        label.textColor = .black
+        label.backgroundColor = .white
+        return label
     }()
     
     let login: UIButton = {
-        let login = UIButton()
+        let login = UIButton(type: .system)
         login.setTitle("Login", for: .normal)
         login.setTitleColor(.orange, for: .normal)
         login.backgroundColor = .white
@@ -80,24 +88,35 @@ class  SignUpController: UIViewController {
         login.addTarget(self, action: #selector(goToSignInPage), for: .touchUpInside)
         return login
     }()
+    
+    let stackview: UIStackView = {
+        let stackview = UIStackView()
+        stackview.axis = .horizontal
+        stackview.spacing = 5
+        return stackview
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(register)
+        view.addSubview(customView)
+        customView.addSubview(register)
         view.addSubview(email)
         view.addSubview(userName)
         view.addSubview(password)
         view.addSubview(signUpButton)
-        view.addSubview(label)
-        view.addSubview(login)
+        view.addSubview(stackview)
+        stackview.addArrangedSubview(WarningLabel)
+        stackview.addArrangedSubview(login)
         view.backgroundColor = .white
         makeConstraint()
-        }
+    }
     
     @objc func goToSignInPage() {
-       // viewmodel.signUp(email)
-        let destinationVC = ViewController2()
-        navigationController?.pushViewController(destinationVC, animated: true)
+        // viewmodel.signUp(email)
+        let destinationVC = LoginController()
+        navigationController?.present(destinationVC, animated: true)
+        
     }
 }
 
-    
+
