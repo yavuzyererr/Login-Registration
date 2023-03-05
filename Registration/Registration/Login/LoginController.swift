@@ -84,6 +84,14 @@ class LoginController : UIViewController {
         stackview.spacing = 5
         return stackview
     }()
+    let alertButton:UIButton = {
+        let alertButton = UIButton()
+        
+        return alertButton
+    }()
+    
+    var loginViewModel = LoginViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,8 +111,18 @@ class LoginController : UIViewController {
     @objc func goToSignUpPage() {
         navigationController?.popViewController(animated: true)
     }
+    
     @objc func goToHomeScreen() {
-        let destinationVC = HomeScreenController()
-        navigationController?.pushViewController(destinationVC, animated: true)
+        if let nonOpEmail = email.text, let nonOpPassword = password.text {
+            if loginViewModel.checkUserInfo(email: nonOpEmail, password: nonOpPassword) {
+                let destinationVC = HomeScreenController()
+                navigationController?.pushViewController(destinationVC, animated: true)
+            }
+            else  {
+                var alertMessage = UIAlertController(title: "WRONG PASSWORD", message: "Wrong Password", preferredStyle: .alert)
+                alertMessage.addAction(UIAlertAction(title: "Try Again", style: UIAlertAction.Style.default))
+                self.present(alertMessage, animated: true)
+            }
+        }
     }
 }

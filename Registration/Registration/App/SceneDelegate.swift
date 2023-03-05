@@ -1,4 +1,4 @@
-//
+
 //  SceneDelegate.swift
 //  Registration
 //
@@ -17,9 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         let vc = SignUpController()
-        let nav = UINavigationController(rootViewController: vc)
-        
-        window?.rootViewController = nav
+                let nav = UINavigationController(rootViewController: vc)
+                window?.rootViewController = nav
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

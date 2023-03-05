@@ -96,6 +96,8 @@ class  SignUpController: UIViewController {
         return stackview
     }()
     
+    var viewModel = SignUpViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(customView)
@@ -112,12 +114,23 @@ class  SignUpController: UIViewController {
     }
     
     @objc func goToSignInPage() {
-        // viewmodel.signUp(email)
-        let destinationVC = LoginController()
-        navigationController?.isNavigationBarHidden = true
-        navigationController?.pushViewController(destinationVC, animated: true)
-        
+        if let nonOpEmail = email.text , let nonOpPassword = password.text {
+            viewModel.saveUserInfo(email: nonOpEmail, password: nonOpPassword)
+                let destinationVC = LoginController()
+                navigationController?.isNavigationBarHidden = true
+                navigationController?.pushViewController(destinationVC, animated: true)
+            
+            
+            
+        }
     }
 }
-
+        
+        
+        
+        
+        
+        
+        
+       
 

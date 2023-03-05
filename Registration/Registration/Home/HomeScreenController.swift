@@ -41,7 +41,9 @@ class HomeScreenController: UIViewController {
         view.backgroundColor = .white
         makeConstraints()
     }
+    
     @objc func goToLoginScreen(){
+        UserDefaults.standard.set(false, forKey: "isLogin")
         navigationController?.popViewController(animated: true)
     }
 }
